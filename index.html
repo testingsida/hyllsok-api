@@ -13,7 +13,7 @@ body { background:var(--bg); color:var(--text); font-family:Arial,Helvetica,sans
 main { min-height:100vh; display:flex; justify-content:center; align-items:center; padding:48px 22px 85px; }
 .panel { width:min(720px,100%); text-align:center; }
 .brand { display:flex; align-items:center; justify-content:center; gap:13px; margin:0 auto 40px; user-select:none; }
-.brand img { width:clamp(58px, 10vw, 95px); height:auto; flex-shrink:0; object-fit:contain; }
+.brand img { width:clamp(58px, 10vw, 95px); height:auto; flex-shrink:0; object-fit:contain; display:block; transform:translateY(10px); }
 .brand-word { font-size:clamp(52px, 8vw, 86px); font-weight:800; color:var(--navy); letter-spacing:-4px; line-height:1; }
 .result { margin:-5px auto 22px; min-height:170px; }
 .result[hidden], .message[hidden] { display:none!important; }
@@ -29,6 +29,7 @@ main { min-height:100vh; display:flex; justify-content:center; align-items:cente
 @media (max-width:520px) {
   main {padding:35px 16px 65px;}
   .brand {gap:8px;margin-bottom:30px;}
+  .brand img {transform:translateY(0);}
   .brand-word {font-size:clamp(39px,10vw,58px);letter-spacing:-2.5px;}
   .search {height:70px;padding:0 14px;}
   .result {min-height:128px;}
